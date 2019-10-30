@@ -5,19 +5,18 @@ using FinchAPI;
 namespace Project_FinchControl
 {
 
-    // **************************************************
-    //
+    // ************************************************************
     // Title: Finch Control
-    // Description: 
+    // Description: User and Programmer control for the Finch robot
     // Application Type: Console
-    // Author: 
-    // Dated Created: 
-    // Last Modified: 
-    //
-    // **************************************************
-
+    // Author: Nathan Hodges 
+    // Dated Created: 10/14/2019
+    // Last Modified: 10/31/2019
+    // ************************************************************
     class Program
     {
+        #region ENUM
+
         public enum Command
         {
             NONE,
@@ -32,12 +31,20 @@ namespace Project_FinchControl
             DONE
         }
 
+        #endregion
+
+        #region DISPLAY
+
         static void Main(string[] args)
         {
             DisplayWelcomeScreen();
             DisplayMenuScreen();
             DisplayClosingScreen();
         }
+
+        #endregion
+
+        #region MY MENU
 
         static void DisplayMenuScreen()
         {
@@ -143,6 +150,8 @@ namespace Project_FinchControl
 
             } while (!quitApplication);
         }
+
+        #endregion
 
         #region USER PROGRAMMING
 
@@ -654,7 +663,7 @@ namespace Project_FinchControl
         static void DisplayScreenHeader(string headerText)
         {
             Console.Clear();
-            Console.WriteLine();
+            Console.WriteLine("-----------------");
             Console.WriteLine("\t\t" + headerText);
             Console.WriteLine();
         }
@@ -662,5 +671,3 @@ namespace Project_FinchControl
         #endregion
     }
 }
-
-
